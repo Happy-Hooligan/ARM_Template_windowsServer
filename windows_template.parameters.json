@@ -12,13 +12,13 @@
         }
       },
       "domainToJoin": {
-        "value": "communityyouthservices.local"
+        "value": "Name of your domain"
       },  
       "domainUsername": {
-        "value": "administrator"
+        "value": "oneWhoAdministers"
       },
       "adminUsername": {
-          "value": "machineAccount"  
+          "value": "localAdmin"  
       },
       "vmSize": {
         "value": "Standard_B2ms",
@@ -27,13 +27,13 @@
         }
       },
       "virtualNetworkName": {
-        "value": "Site-to-site-VPN",
+        "value": "VNet-Name",
         "metadata": {
             "description": "Get-AzVirtualNetwork | select name,subnets"
         }
       },
       "subnetName": {
-        "value": "VPN-Gateway",
+        "value": "Subnet-Name",
         "metadata": {
             "description": "(get-azVirtualNetwork -Name Automation_Resources-vnet).Subnets.name"
         }
