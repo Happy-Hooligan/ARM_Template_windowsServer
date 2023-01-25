@@ -50,9 +50,9 @@
       },
       "ouPath": {
         "type": "string",
-        "defaultValue": "OU=Unassigned Computers,OU=CYSComputers,DC=CommunityYouthServices,DC=local",
+        "defaultValue": "OU Path",
         "metadata": {
-            "description": "OU path to place server"
+            "description": "OU path to place server. Default Computers OU is not recommemded. Especially when combines with KeyVault"
         }
       },
       "adminUsername": {
