@@ -1,0 +1,45 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "vmName": {
+        "value": "server2022-Test"
+      },
+      "windowsVersion": {
+        "value": "2022-datacenter-g2",
+        "metadata": {
+            "description": "Get-AzVMImageSku -Location westus2 -PublisherName MicrosoftWindowsServer -Offer WindowsServer"
+        }
+      },
+      "domainToJoin": {
+        "value": "communityyouthservices.local"
+      },  
+      "domainUsername": {
+        "value": "administrator"
+      },
+      "adminUsername": {
+          "value": "machineAccount"  
+      },
+      "vmSize": {
+        "value": "Standard_B2ms",
+        "metadata": {
+            "description": "Get-AzVMSize -Location westus2 | where { $_.numberofcores -eq 2 }"
+        }
+      },
+      "virtualNetworkName": {
+        "value": "Site-to-site-VPN",
+        "metadata": {
+            "description": "Get-AzVirtualNetwork | select name,subnets"
+        }
+      },
+      "subnetName": {
+        "value": "VPN-Gateway",
+        "metadata": {
+            "description": "(get-azVirtualNetwork -Name Automation_Resources-vnet).Subnets.name"
+        }
+      },
+      "networkSecurityGroupName": {
+        "value": "server2022-test"
+      }
+    }
+  }
